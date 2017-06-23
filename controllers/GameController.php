@@ -16,6 +16,7 @@ class GameController extends TController
         $nt_status = 0;
         $cd_status = 0;
         $im_status = 0;
+        $gg_status = 0;
         if ($is_login == false) {
             $mg_status = 1;
             $bbin_status = 1;
@@ -23,8 +24,9 @@ class GameController extends TController
             $nt_status = 1;
             $cd_status = 1;
             $im_status = 1;
+            $gg_status = 1;
         }
-        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status, 'cd_status' => $cd_status, 'im_status' => $im_status));
+        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status, 'cd_status' => $cd_status, 'im_status' => $im_status, 'gg_status' => $gg_status));
     }
 
     public function actionFish()
