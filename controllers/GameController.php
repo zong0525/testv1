@@ -14,13 +14,15 @@ class GameController extends TController
         $bbin_status = 0;//BBIN::getStatus($is_login,BBIN::CH);
         $pt_status = 0;//PT::getStatus($is_login,PT::PT_RE);
         $nt_status = 0;
+		$cd_status = 0;
         if ($is_login == false) {
             $mg_status = 1;
             $bbin_status = 1;
             $pt_status = 1;
             $nt_status = 1;
+			$cd_status = 1;
         }
-        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status));
+        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status, 'cd_status' => $cd_status));
     }
 
     public function actionFish()
