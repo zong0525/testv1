@@ -14,15 +14,17 @@ class GameController extends TController
         $bbin_status = 0;//BBIN::getStatus($is_login,BBIN::CH);
         $pt_status = 0;//PT::getStatus($is_login,PT::PT_RE);
         $nt_status = 0;
-		$cd_status = 0;
+        $cd_status = 0;
+        $im_status = 0;
         if ($is_login == false) {
             $mg_status = 1;
             $bbin_status = 1;
             $pt_status = 1;
             $nt_status = 1;
-			$cd_status = 1;
+            $cd_status = 1;
+            $im_status = 1;
         }
-        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status, 'cd_status' => $cd_status));
+        $this->render('index', array('mg_status' => $mg_status, 'bbin_status' => $bbin_status, 'pt_status' => $pt_status, 'nt_status' => $nt_status, 'cd_status' => $cd_status, 'im_status' => $im_status));
     }
 
     public function actionFish()
@@ -137,7 +139,7 @@ class GameController extends TController
         if ($is_login) {
             $gpName = $this->gpName;
             $prefix = $this->customer->getPrefix();
-            if (strcasecmp($prefix, 'ibo') == 0) {//IBO平台玩家前缀
+            if (strcasecmp($prefix, 'ibo') == 0) {//IBO平�?�玩家�?缀
                 $gpName = 'AG1_' . $gpName;
             }
             $ag_url = AsiaGames::getSingleGameUrl($this->uid, $gpName, $gameType);
@@ -159,7 +161,7 @@ class GameController extends TController
         if ($is_login) {
             $gpName = $this->gpName;
             $prefix = $this->customer->getPrefix();
-            if (strcasecmp($prefix, 'ibo') == 0) {//IBO平台玩家前缀
+            if (strcasecmp($prefix, 'ibo') == 0) {//IBO平�?�玩家�?缀
                 $gpName = 'AG1_' . $gpName;
             }
             $ag_url = AsiaGames::getDemoGameUrl($this->uid, $gpName, $gameType);
@@ -204,7 +206,7 @@ class GameController extends TController
     }
 
     /**
-     * 进入bbin电子游戏
+     * 进入bbin电�?游�?
      * @param $gametype
      */
     public function actionBbin($gametype)
@@ -234,7 +236,7 @@ class GameController extends TController
     }
 
     /**
-     * 进入PT电子游戏
+     * 进入PT电�?游�?
      * @param $gameCode
      */
     public function actionPt($gameCode)
@@ -282,7 +284,7 @@ class GameController extends TController
     }
 
     /**
-     * 进入PT电子游戏
+     * 进入PT电�?游�?
      * @param $gameCode
      */
     public function actionNPt($gameCode)
@@ -309,7 +311,7 @@ class GameController extends TController
     }
 
         /**
-     * 进入PT电子游戏
+     * 进入PT电�?游�?
      * @param $gameCode
      */
     public function actionTPt($gameCode)
@@ -336,7 +338,7 @@ class GameController extends TController
     }
 
     /**
-     * 进入PT电子游戏
+     * 进入PT电�?游�?
      * @param $gameCode
      */
     public function actionPtNoCDN($gameCode)
@@ -407,7 +409,7 @@ class GameController extends TController
     }
 
     /**
-     * 获取PT信息
+     * 获�?�PT信�?�
      */
     public function actionPtinfo()
     {
@@ -523,6 +525,6 @@ class GameController extends TController
                 $this->fail();
             }
         }
-        $this->fail('未登陆！');
+        $this->fail('未登陆�?');
     }
 } 
