@@ -18,7 +18,7 @@ class FeedbackController extends Controller
         $th = new TongHuiPay();
         $type = $this->get("notify_type");
         $rs = "fail";
-        if ($type == "back_notify") {
+        if ($type == "back_notify" && $type == "back_notify1") {
             $flag = $th->feedback($_GET);
             if ($flag) {
                 $rs = "success";
