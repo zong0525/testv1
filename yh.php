@@ -1,2 +1,3 @@
-echo "testing .......";
-aaa
+<?php
+
+echo "hello world";
