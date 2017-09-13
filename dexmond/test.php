@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link href="../Content/jquery-ui.css?v=1" rel="stylesheet">
+		<link href="../Content/jquery-ui.css?v=2" rel="stylesheet">
 	</head>
 	<body></body>
 	<footer></footer>
